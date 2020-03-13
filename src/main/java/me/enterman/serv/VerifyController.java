@@ -15,4 +15,8 @@ public class VerifyController {
 		return "";
 
 	}
+	@RequestMapping("/error")
+	public String error(){
+		return "";
+	}
 }
