@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans|Open+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+	<link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+	<title></title>
+</head>
+<body style="padding: 0">
+<style>
+	.vue-typer .custom.char.typed {
+		color: #FFFFFF;
+	}
+
+	.vue-typer .custom.char.selected {
+		color: #FFFFFF;
+	}
+
+	.vue-typer .custom.caret {
+		background-color: #FFFFFF;
+	}
+	html, body{
+		margin: 0;
+
+		padding: 0;
+
+		min-width: 100%;
+		width: 100%;
+		max-width: 100%;
+
+		min-height: 100%;
+		height: 100%;
+		max-height: 100%;
+	}
+	.full-height {
+		min-height: 100%;
+	}
+</style>
+<div id="app" style="padding: 0">
+	<v-app style="padding: 0">
+		<v-parallax src="https://cdn.vuetifyjs.com/images/parallax/material.jpg" class="full-height">
+			<v-row align="center" justify="center">
+				<v-col class="text-center" cols="12" style="position: absolute">
+					<h1 class="display-1 font-weight-thin mb-4">Exusiai</h1>
+					<h4 style="font-family: 'Open Sans', sans-serif;" class="subheading">一个
+						<vue-typer
+								:text='["好看的","易上手的","二次元","功能丰富的"]'
+								:repeat='Infinity'
+								:shuffle='false'
+								initial-action='typing'
+								:pre-type-delay='70'
+								:type-delay='70'
+								:pre-erase-delay='2000'
+								:erase-delay='250'
+								erase-style='select-all'
+								:erase-on-complete='false'
+								caret-animation='blink'
+						></vue-typer>
+						Minecraft作弊客户端
+					</h4>
+				</v-col>
+			</v-row>
+			<v-row align="center" style="position: absolute; width: 100%; text-align: center">
+				<v-col class="text-center" cols="12" style="margin-top: 425px">
+					<v-btn icon color="white" style="display: inline-block" @click="$vuetify.goTo(1000, {})">
+						<v-icon>mdi-chevron-down</v-icon>
+					</v-btn>
+				</v-col>
+			</v-row>
+
+		</v-parallax>
+
+		<v-layout style="margin-top: 50px">
+			<v-flex xs4>
+
+				<v-card
+						class="mx-auto"
+						max-width="336"
+						elevation="5"
+				>
+					<v-card-title class="justify-center">
+						<v-icon size="45" color="blue">speed</v-icon>
+					</v-card-title>
+
+					<v-card-text>
+						通过使用最新的OptifineL5的效果，我们可以登峰造极地减少掉帧，从而为您的游戏提供最佳的FPS。
+					</v-card-text>
+				</v-card>
+
+			</v-flex>
+			<v-flex xs4>
+
+				<v-card
+						class="mx-auto"
+						max-width="336"
+						elevation="5"
+				>
+					<v-card-title class="justify-center">
+						<v-icon size="45" color="blue">accessibility_new</v-icon>
+					</v-card-title>
+
+					<v-card-text>
+						Exusiai是建立在用户友好之上的，所以每个人都可以没有问题的使用它。
+						Exusiai的用户友好型ClickGUI将确保你可以通过易于访问的配置来玩游戏。
+					</v-card-text>
+				</v-card>
+
+			</v-flex>
+		</v-layout>
+
+
+	</v-app>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+<script src="https://unpkg.com/vue-typer/dist/vue-typer.min.js"></script>
+<script>
+    var VueTyperPlugin = window.VueTyper.default;
+    Vue.use(VueTyperPlugin);
+    new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+
+    })
+
+</script>
+</body>
+</html>
